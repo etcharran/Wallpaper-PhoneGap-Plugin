@@ -56,7 +56,7 @@ public class Wallpaper extends CordovaPlugin
 	                	
                 		if(saveRemoteImage(direct,path,imageTitle)){
                 			Bitmap setAsWallpaper = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory() + "/" + folderName + "/" + imageTitle + ".jpeg");
-    	                    wallpaperManager.setBitmap(setAsWallpaper);
+    	                    wallpaperManager.setBitmap(setAsWallpaper,null,false,2);
     	                    callbackContext.success();
     	    	            return true;
                 		}
